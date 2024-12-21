@@ -1,0 +1,145 @@
+body {
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+main {
+  background-color: white;
+}
+
+/*
+h1{
+  font-size: 15px;
+  font-family: Tahoma, sans-serif;
+  margin-left: 130px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #3fba7e;
+}
+*/
+hr {
+  margin-top: 0px;
+}
+
+h2{
+  font-size: 20px;
+  font-family: Lucida Sans Typewriter, sans-serif;
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* BUTTON */
+/* BUTTON */
+/* BUTTON */
+
+.button1 {
+  /*Text size & color of Text*/
+    font-size: 30px;
+    color: white;
+  /* Color of button & button border*/
+    background-color: #00BF62;
+    border-color: mintcream;
+  /* Makes the button curved */
+    border-radius: 15px;
+  font-weight: bolder;
+  padding: 5px;
+  cursor: pointer;
+  font-family: "Times New Roman", Sans-Serif;
+  z-index: 2; 
+}
+
+.button1:hover {
+background-color: #00dd99;
+color: #E1d9d1;
+}
+
+/* THE IMAGE SLIDER */
+/* THE IMAGE SLIDER */
+/* THE IMAGE SLIDER */
+
+.slider-wrapper {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 8 / 4.5;  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: inherit;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+  padding: 25px;
+  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slider img {
+  flex: 1 0 110%;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  opacity: 0.85;
+  transition: opactiy ease 250ms;
+}
+.slider-nav a:hover {
+  opacity: 1;
+  background-color: beige;
+}
+
+.container {
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.top-container {
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  text-align: left;
+  padding: 10px 16px;
+  background: #00BF62;
+  color: #f1f1f1;
+}
+
+.button2 {
+  position: relative;
+  top: 8px;
+  float: right;
+  font-family: "Times New Roman", Sans-Serif;
+  font-size: 20px;
+}

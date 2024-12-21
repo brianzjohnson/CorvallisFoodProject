@@ -1,0 +1,23 @@
+.header {
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  text-align: left;
+  padding: 10px 16px;
+  background: #00BF62;
+  color: #f1f1f1;
+}
+
+.button2 {
+  position: relative;
+  float: right;
+  top: 8px;
+  font-family: "Times New Roman", Sans-Serif;
+  font-size: 20px;
+}
+
+Shahar {
+  
+  max-width: 10%;
+  height: auto;
+}
