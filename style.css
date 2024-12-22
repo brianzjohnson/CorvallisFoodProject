@@ -88,8 +88,10 @@ color: #E1d9d1;
   display: none;
 }
 .slider img {
-  flex: 1 0 110%;
+  flex: 1 0 100%;
   object-fit: cover;
+  width: 500px;
+  height: auto;
 }
 
 .slider-nav {
