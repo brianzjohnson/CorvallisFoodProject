@@ -1,4 +1,4 @@
-body {
+body { /*Basic Outline Styling*/
   padding: 0;
   box-sizing: border-box;
   display: flex;
@@ -8,92 +8,89 @@ body {
   text-align: center;
 }
 
-main {
-  background-color: white;
-}
-
-/*
-h1{
-  font-size: 15px;
-  font-family: Tahoma, sans-serif;
-  margin-left: 130px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: left;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #3fba7e;
-}
-*/
-hr {
-  margin-top: 0px;
-}
-
-h2{
-  font-size: 20px;
+h2{ /*Header 2 Text Settings*/
+  font-size: 1.8em;
   font-family: Lucida Sans Typewriter, sans-serif;
-  margin: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 1px;
+  padding-left: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
-/* BUTTON */
-/* BUTTON */
-/* BUTTON */
+.element.style {
+  width: auto;
+}
 
+/*Volunteer Button */
 .button1 {
-  /*Text size & color of Text*/
-    font-size: 30px;
-    color: white;
-  /* Color of button & button border*/
-    background-color: #00BF62;
-    border-color: mintcream;
-  /* Makes the button curved */
-    border-radius: 15px;
+  font-size: 30px;
+  color: white;
+  background-color: #00BF62; 
+  border-color: mintcream;
+  border-radius: 15px;
   font-weight: bolder;
-  padding: 5px;
+  padding: 1%;
   cursor: pointer;
   font-family: "Times New Roman", Sans-Serif;
   z-index: 2; 
 }
-
 .button1:hover {
 background-color: #00dd99;
 color: #E1d9d1;
 }
-
-/* THE IMAGE SLIDER */
-/* THE IMAGE SLIDER */
-/* THE IMAGE SLIDER */
-
-.slider-wrapper {
-  position: relative;
-  max-width: 48rem;
-  margin: 0 auto;
+/*Donate Button */
+.button3 {
+  font-size: 30px;
+  color: white;
+  background-color: #00BF62; 
+  border-color: mintcream;
+  border-radius: 15px;
+  font-weight: bolder;
+  padding: 1%;
+  
+  cursor: pointer;
+  font-family: "Times New Roman", Sans-Serif;
+  z-index: 2; 
+}
+.button3:hover {
+background-color: #00dd99;
+color: #E1d9d1;
 }
 
+/* Image Slider that ensures the slider is centered and has a max width */
+.slider-wrapper {
+  position: relative;
+  max-width: 80vw;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* Flexbox to align images in a row with hidden overflow and scroll snapping */
 .slider {
   display: flex;
-  aspect-ratio: 8 / 4.5;  overflow-x: auto;
+  aspect-ratio: 8 / 4.5;
+  overflow-x: hidden;
   scroll-snap-type: x mandatory;
-  scroll-behavior: inherit;
+  scroll-behavior: smooth;
   box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
   border-radius: 0.5rem;
   padding: 25px;
-  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
-  scrollbar-width: none; /* Hide scrollbar Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* Hide the scrollbar */
 .slider::-webkit-scrollbar {
   display: none;
 }
+/* Style images in image slideshow */
 .slider img {
-  flex: 1 0 100%;
+  flex: 1 0 111%;
   object-fit: cover;
-  width: 500px;
-  height: auto;
+  height: 100%;
+  scroll-snap-align: start; /* Ensure each image snaps in position */
 }
 
+/* Navigation buttons styling */
 .slider-nav {
   display: flex;
   column-gap: 1rem;
@@ -103,45 +100,68 @@ color: #E1d9d1;
   transform: translateX(-50%);
   z-index: 1;
 }
-
 .slider-nav a {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
   background-color: whitesmoke;
   opacity: 0.85;
-  transition: opactiy ease 250ms;
+  transition: opacity 250ms ease, background-color 250ms ease;
 }
 .slider-nav a:hover {
   opacity: 1;
-  background-color: beige;
+  background-color: darkgrey;
 }
 
-.container {
-  padding-left: 250px;
-  padding-right: 250px;
+/* Set the initial position of the slider to show the third image */
+.slider {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 
+/* Top Container Settings*/
 .top-container {
   background-color: white;
   padding: 30px;
   text-align: center;
 }
 
+/* The Main Header Settings */
 .header {
   position: sticky;
   z-index: 99;
   top: 0;
-  text-align: left;
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space out the content */
+  align-items: center; /* Vertically center items */
   padding: 10px 16px;
-  background: #00BF62;
-  color: #f1f1f1;
+  background: #D8FFD8;
+  color: black;
+  width: 100%;
 }
 
-.button2 {
-  position: relative;
-  top: 8px;
-  float: right;
+.button2 { /* Learn More Button */
   font-family: "Times New Roman", Sans-Serif;
-  font-size: 20px;
+  font-size: 30px;
+  padding: 8px 16px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+.button2:hover {
+  background-color: #ccc;
+}
+/* Settings for Mobiile Devices */
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column; /* Stack the text and button vertically on small screens */
+    text-align: center; /* Center-align text on small screens */
+  }
+  h2 {
+    font-size: 1.1em;
+  }
+}
+ 

@@ -1,31 +1,48 @@
 .header {
-  position: sticky;
-  z-index: 99;
-  top: 0;
-  text-align: left;
+  position: sticky; /*So the header stays at the top of the page*/
+  z-index: 99; /*So it overlaps anything else*/
+  top: 0; /*So it overlaps anything else*/
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space out the content */
+  align-items: center; /* Vertically center items */
   padding: 10px 16px;
-  background: #00BF62;
-  color: #f1f1f1;
-  margin-top: 0px;
+  background: #D8FFD8; /*Background Color*/
+  color: black; /*Button Text Color*/
 }
 
-.button2 {
-  position: relative;
-  float: right;
-  top: 8px;
+.button { /*Button Styling*/
   font-family: "Times New Roman", Sans-Serif;
   font-size: 20px;
+  padding: 8px 16px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.button:hover { /*Button Color After Hovering*/
+  background-color: #ccc;
+}
+@media (max-width: 600px) { /*For Mobile Devices*/
+  .header {
+    flex-direction: column; /* Stack the text and button vertically on small screens */
+    text-align: center; /* Center-align text on small screens */
+}
+  .button {
+    margin-top: 10px; /* Adds space between the text and button on smaller screens */
+  }
+}
 
+/* I dont remember what this does but it looks like it is for the language of the page */
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+/* Column Settings */
 .column {
   float: left;
   width: 33.3%;
@@ -33,6 +50,7 @@ html {
   padding: 0 8px;
 }
 
+/* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 650px) {
   .column {
     width: 100%;
@@ -40,20 +58,20 @@ html {
   }
 }
 
-.card {
+.card { /* Gives the columns some detail */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.container {
+/* Display Settings */
+.container { 
   padding: 0 16px;
 }
-
 .container::after, .row::after {
   content: "";
   clear: both;
   display: table;
 }
 
-.title {
+.title { /*For the position text*/
   color: grey;
 }
