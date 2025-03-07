@@ -31,6 +31,7 @@ h2{ /*Header 2 Text Settings*/
   cursor: pointer;
   font-family: "Times New Roman", Sans-Serif;
   z-index: 2; 
+  padding: 1%;
 }
 .button1:hover {
 background-color: #00dd99;
